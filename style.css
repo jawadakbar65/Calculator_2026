@@ -67,3 +67,47 @@ button:hover{
 #clear:hover{
     transform: rotate(4deg);
 }
+
+.cal {
+    width: 300px;
+    margin: 50px auto;
+}
+
+#inp {
+    width: 280px;
+    height: 45px;
+    font-size: 20px;
+}
+
+#btn,
+#equal,
+#clear {
+    width: 60px;
+    height: 50px;
+    margin: 5px;
+    font-size: 20px;
+}
+
+
+@media (max-width: 600px) {
+
+    .cal {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    #inp {
+        width: 90%;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    #btn,
+    #equal,
+    #clear {
+        width: 60px;
+        height: 55px;
+        margin: 4px;
+        font-size: 20px;
+    }
+}
