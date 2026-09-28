@@ -1,113 +1,120 @@
-*{
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body{
-    background-color: rgb(7, 58, 102);
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    justify-items: center;
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.cal{
-    width: 250px; height: 360px;
-    border:1px solid rgb(200, 178, 178); 
-    margin-top: 10em;
-    border-radius: 10px;
-    padding: 20px 60px;
-    background-image: repeating-linear-gradient(10deg, #565669 10px, #354317 50px, orange 30px, red 40px)
-}
-
-input{
-    padding: 10px 30px;
-    border-radius: 10px;
-    border: 1px solid blue;
-}
-
-#btn{
-    padding: 10px 22px;
-    margin-top: 20px;
-    border-radius: 5px;
-    border: none;
-}
-
-#clear{
-    padding: 10px 20px;
-    background-color: red;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-h2{
-    color: azure;
-}
-
-#btn:active{
-    background-color: bisque ;
-}
-
-input:focus{
-    color: blue;
-}
-
-#equal{
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-}
-
-button:hover{
-    background-color: aqua;
-    transform: translateY(1px);
-    transition: 0.9s;
-}
-
-#clear:hover{
-    transform: rotate(4deg);
+body {
+    background-color: rgb(7, 58, 102);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
 }
 
 .cal {
-    width: 300px;
-    margin: 50px auto;
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid rgb(200, 178, 178); 
+    border-radius: 12px;
+    padding: 20px;
+    background-image: repeating-linear-gradient(10deg, #565669 10px, #354317 50px, orange 80px, red 110px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
+
+h2 {
+    color: azure;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 
 #inp {
-    width: 280px;
-    height: 45px;
-    font-size: 20px;
-}
-
-#btn,
-#equal,
-#clear {
-    width: 60px;
+    width: 100%;
     height: 50px;
-    margin: 5px;
-    font-size: 20px;
+    font-size: 22px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid blue;
+    background-color: #fff;
+    outline: none;
 }
 
+#inp:focus {
+    color: blue;
+}
 
-@media (max-width: 600px) {
+/* Buttons Grid Layout (4 Columns) */
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
 
+/* Common Button Styling */
+.btn {
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: aqua;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    background-color: bisque;
+}
+
+/* Specific Buttons Styling */
+#clear {
+    background-color: red;
+    color: white;
+}
+
+#clear:hover {
+    background-color: #cc0000;
+    transform: rotate(4deg);
+}
+
+#equal {
+    background-color: #28a745;
+    color: white;
+}
+
+#equal:hover {
+    background-color: #218838;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
     .cal {
-        width: 90%;
-        margin: 30px auto;
+        max-width: 100%;
+        padding: 15px;
     }
 
     #inp {
-        width: 90%;
-        height: 50px;
-        font-size: 22px;
+        height: 45px;
+        font-size: 20px;
     }
 
-    #btn,
-    #equal,
-    #clear {
-        width: 60px;
-        height: 55px;
-        margin: 4px;
-        font-size: 20px;
+    .btn {
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .buttons-grid {
+        gap: 8px;
     }
 }
